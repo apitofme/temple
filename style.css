@@ -1,0 +1,208 @@
+@charset "UTF-8";
+
+/*   
+Theme Name:		Temple
+Theme URI:		N/A
+Description:	A custom HTML5, search engine optimized template theme for WordPress.
+Author:			Christopher Leaper	[c.leaper@btinternet.com]
+Author URI:		N/A
+Version:		1.0
+License:		GNU General Public License v3.0 (or later)
+License URI:	http://www.gnu.org/licenses/gpl-3.0.html
+Tags:			white, one-column, flexible-width, custom-menu, featured-images, microformats, post-formats, sticky-post
+Text Domain:	temple
+
+Copyright		2013 Christopher Leaper
+*/
+
+
+
+/******************************
+ * WordPress REQUIRED Styles
+ ******************************/
+/* - Alignment Classes */
+.aligncenter { margin: 0 auto; }
+.alignleft { float: left; margin-right: 1em; }
+.alignright { float: right; margin-left: 1em; }
+
+/* - Caption Related Classes */
+.wp-caption {}
+.wp-caption-text {}
+.gallery-caption {}
+
+/* - Post Classes */
+.sticky {}
+
+/* - Comment Classes */
+.bypostauthor {}
+
+
+
+/*****************************/
+/**
+ *	Content Wrapper
+ *	- uses percentage based widths to achieve a 'responsive' container!
+ *	- widths will cover everything from TabletPCs up to full HD DesktopPC screens
+ *
+ *	Note: use media queries to adapt content for SmartPhones and other small-screen/mobile devices!
+ */
+/*****************************/
+#wrapper.container {
+	margin: 0 auto;
+	max-width: 1200px;
+	min-width: 600px;
+	width: 80%;
+}
+
+
+
+/******************************
+ *	Default Styles (Reset)
+ ******************************/
+ul.menu,
+ul.sub-menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#blog-title {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+
+/******************************
+ *	Main Containers
+ ******************************/
+.page_header {}
+
+#main.content {}
+
+.page_footer {}
+
+
+
+/******************************
+ *	Main Menu
+ ******************************/
+.page_header .nav .menu {
+/*	background-color: rgba(96,160,200,0.4); */
+	border-radius: 4px;
+	line-height: 2;
+	margin: 1em 0 0;
+	z-index: 1;
+}
+
+/* - ALL menu-items */
+.page_header .nav .menu .menu-item {
+	background-color: white;
+	position: relative;
+}
+
+/* - TOP LEVEL menu-items ONLY */
+.page_header .nav .menu > .menu-item {
+	border: 1px solid transparent; /* create invisible border to prevent jumping! */
+	border-radius: 4px;
+/*	box-shadow: 1px 1px 4px rgba(0,0,0,.2); */
+	display: inline-block;
+	text-align: center;
+	width: 12em;
+	z-index: 10;
+}
+
+
+/******************************
+ *	- Sub-Menus
+ ******************************/
+/* -- ALL sub-menus */
+.page_header .nav .sub-menu {
+	background: white;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+/*	box-shadow: 1px 1px 4px rgba(0,0,0,.2); */
+	position: absolute;
+	width: 12em;
+	visibility: hidden;
+	z-index: 20;
+}
+/* -- ALL sub-menu menu-items */
+.page_header .nav .sub-menu .menu-item {
+	display: block;
+	line-height: 3;
+	text-align: left;
+}
+/* -- ALL sub-menu sub-menus */
+.page_header .nav .sub-menu .sub-menu {
+	border-left: none;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	right: -12em; /* offset by the width */
+	top: -1px;
+}
+/* -- ALL sub-menu sub-menu's menu-items */
+.page_header .nav .sub-menu .sub-menu .menu-item {
+	border-left: 1px solid #ccc;
+}
+/* -- ALL sub-menu sub-menu's FIRST menu-item */
+.page_header .nav .sub-menu .sub-menu .menu-item:first-child {
+	border-left: none; /* no border where menus join */
+}
+
+/* -- FIRST LEVEL sub-menu ONLY */
+.page_header .nav .menu > .menu-item > .sub-menu {
+	left: -1px; /* account for border width */
+	top: 2.8em; /* enough to still overlap slightly (base 'line-height' for menu is 2!) */
+}
+/* -- FIRST LEVEL sub-menu's FIRST menu-item's sub-menu ONLY (if present) */
+.page_header .nav .menu > .menu-item > .sub-menu > .menu-item:first-child .sub-menu {
+	top: 2px; /* account for padding and border */
+}
+
+/* -- ALL SECOND LEVEL (or lower) sub-menu sub-menus (if present) */
+.page_header .nav .sub-menu .sub-menu .menu-item {
+	top: 0; /* account for border */
+}
+
+
+/******************************
+ *	- Menu Links
+ ******************************/
+.page_header .nav .menu > .menu-item a {
+	display: block;
+	padding: 8px;
+}
+.page_header .nav .menu > .menu-item > .sub-menu a {
+	display: block;
+	font-size: .75em;
+	padding: 0 24px;
+}
+.page_header .nav .menu > .menu-item > .sub-menu .sub-menu a {}
+
+
+/******************************
+ *	- Menu Hover Behaviours
+ ******************************/
+/* -- TOP LEVEL menu-items */
+.page_header .nav .menu > .menu-item:hover {
+	border-color: #ccc;
+/*	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0; */
+z-index: 15;
+}
+
+/* -- ALL sub-menus */
+.page_header .nav .menu .sub-menu .menu-item:hover > .sub-menu {
+	visibility: visible;
+}
+
+
+/* -- FIRST LEVEL sub-menu ONLY */
+.page_header .nav .menu > .menu-item:hover > .sub-menu {
+	border-top: none;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	visibility: visible;
+}
+
+
