@@ -8,15 +8,14 @@ A simple template theme for WordPress designed to be a solid starting point for 
 
 - HTML5 doctype and syntax
 
-- Bear minimum CSS
-
--- a basic responsive layout using percentage based max/min widths (from 1200px down to 600px)
---- you will need to add your own media queries and styles for mobile content
-
--- pure CSS driven cascading menu system
---- tested only to 3 levels deep (drop > side > side)
---- NOT tested across all browers (yet) >> see "TODO" section
---- currentrly uses some CSS3 styling (un-essential to function)
+- Bear minimum CSS, including
+	
+	- a basic responsive layout using percentage based max/min widths (from 1200px down to 600px). Although you will need to add your own media queries and styles for mobile content!
+	
+	- pure CSS driven cascading menu system
+		- only tested to 3 levels deep (drop > side > side)
+		- NOT tested across all browers yet! (see "TODO" section)
+		- currentrly uses some CSS3 styling (un-essential to function)
 
 - Breadcrumb navigation links
 
@@ -24,8 +23,7 @@ A simple template theme for WordPress designed to be a solid starting point for 
 
 - Microformats applied to appropriate data (e.g. post meta-data, author data etc.)
 
-- Pre-developed `functions.php` file using established name_prefixing and hook/action methodologies
--- designed for you to add to it as you see fit but there's enough to get you off to a good start
+- Pre-developed `functions.php` file using established "best-practices" and designed for you to add to it as you see fit.
 
 
 ### Details
@@ -49,8 +47,7 @@ v1.0	- Initial release --
 		a header and footer, a couple of custom sidebars, purely functional CSS and an established `functions.php` file.
 
 
+---
 
 Copyright © 2013 Christopher Leaper
-Licensed under the terms of the [GNU General Public License (GPLv3)][1]
-
-	[1]: http://www.gnu.org/licenses/gpl-3.0.html
+Licensed under the terms of the [GNU General Public License (GPLv3)](http://www.gnu.org/licenses/gpl-3.0.html)
