@@ -1,4 +1,4 @@
-temple
+Temple
 ======
 
 A simple template theme for WordPress designed to be a solid starting point for theme developers!
@@ -50,4 +50,5 @@ v1.0	- Initial release --
 ---
 
 Copyright © 2013 Christopher Leaper
-Licensed under the terms of the [GNU General Public License (GPLv3)](http://www.gnu.org/licenses/gpl-3.0.html)
+
+Temple is licensed under the terms of the [GNU General Public License (GPLv3)](http://www.gnu.org/licenses/gpl-3.0.html)
